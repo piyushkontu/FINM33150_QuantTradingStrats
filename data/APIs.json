@@ -1,7 +1,3 @@
 {
-  "Quandl":
-    {
-      "name": "quandl.ApiConfig.api_key",
-      "key" : "H9XBgxzFwkmwKJs2Gxpp"
-    }
+  "Quandl": "H9XBgxzFwkmwKJs2Gxpp"
 }
