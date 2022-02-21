@@ -64,7 +64,7 @@ def getQuandlEODData(sec,start_date,end_date,columns):
     # end_date      | string (YYYY-MM-DD)       | end date of data (same as or after start_date)
     # columns       | string / list of string   | columns to return
     
-    print(f"Quandl | START | Retriving Quandl data for security: {sec}\n")
+    print(f"Quandl | START | Retriving Quandl data for security: {sec}")
     
     # Retrieve data using quandl.get_table
     quandl.ApiConfig.api_key = APIs['Quandl']
@@ -77,7 +77,7 @@ def getQuandlEODData(sec,start_date,end_date,columns):
     data.date = pd.to_datetime(data.date, unit='D')
     data.dropna(inplace=True)
     
-    print(f"Quandl | DONE  | Returning {len(data):d} dates of data from {data.date.min()} to {data.date.max()}.\n")
+    print(f"Quandl | DONE  | Returning {len(data):d} dates of data from {data.date.min()} to {data.date.max()}.")
     
     data.set_index(['date','ticker'],inplace=True)
     data.sort_index(inplace=True)
